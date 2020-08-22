@@ -306,3 +306,28 @@ mv mario.c mario1.c
 mv mario.c mario2.c
 rm mario
 make mario2
+git add -A
+git commit -m "added solution for mario challenge 2"
+git push -u origin master
+git push
+git push -u origin master
+ls
+pwd
+cd ..
+ls
+cd pset2
+clang -o mario ./mario2.c
+cd mario
+ls
+cd pset1/mario/
+clang -o mario ./mario2.c
+clear
+clang -o mario ./mario2.c
+-v
+clang -o mario ./mario2.c -v
+clang -lcs50 -o mario ./mario2.c -v
+./mario
+./mario
+cd ..
+cd ..
+cd
