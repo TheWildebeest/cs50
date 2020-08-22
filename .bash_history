@@ -114,3 +114,54 @@ ls
 cd home
 ls
 cd ubuntu/
+git add -A
+git commit -m "completed hello.c problem"
+git push origin master
+cd ..
+ls
+cd ubuntu/
+ls
+cd week1/
+ls
+mkdir pset2
+cd pset2
+ls
+touch mario.c
+make mario
+make mario
+./mario
+make mario
+./mario
+make mario
+make mario
+make mario
+make mario
+make mario
+make mario
+clear
+make mario
+clear
+make mario
+make mario
+make mario
+./mario
+make mario
+./mario
+make mario
+./mario
+make mario
+./mario
+./mario
+./mario
+make mario
+make mario
+make mario
+./mario
+./mario
+./mario
+clear
+make mario
+./mario
+./mario
+make mario
+./mario
