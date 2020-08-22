@@ -165,3 +165,144 @@ make mario
 ./mario
 make mario
 ./mario
+git add -A
+git commit -m "successful do...while loop"
+make mario
+clear
+make mario
+clear
+make mario
+./ario
+./mrio
+./mario
+make mario
+./mario
+clear
+make mario
+./mario
+./mario
+make mario
+make mario
+./mario
+./mario
+./mario
+./mario
+check50 cs50/problems/2020/x/mario/less
+make mario
+ls
+check50 cs50/problems/2020/x/mario/less
+cd week1/pset1
+ls
+cd ..
+ls
+cd pset 2
+cd pset2
+make mario
+check50 cs50/problems/2020/x/mario/less
+./mario
+./mario
+make mario
+./mario
+check50 cs50/problems/2020/x/mario/less
+check50 cs50/problems/2020/x/mario/less
+submit50 cs50/problems/2020/x/mario/less
+ls
+mc mario.c mario1.c
+mv mario.c mario1.c
+make mario1
+rm mario
+ls
+re -rf mario
+rm -rf mario
+ls
+pwd
+pwd
+touch mario2.c
+echo mario.c >> mario2.c
+ls
+cat mario2.c
+echo mario2.c
+cat mario2.c
+echo ./mario1.c ./mario2.c
+echo mario1.c >> mario2.c
+cat mario2.c
+echo cat mario1.c >> mario2.c
+echo ./mario1.c > mario2.c
+cat ./mario1.c
+contents=cat ./mario.c
+contents = cat ./mario1.c
+contents= cat ./mario1.c
+echo contents >> mario2.c
+echo $contents > mario2.c
+echo $contents
+echo contents
+CONTENTS=(cat ./mario1.c)
+echo $CONTENTS
+eval cat ./mario1.c
+CONTENTS=eval cat ./mario1.c
+echo $CONTENTS
+contents=$(cat ./mario1.c)
+echo $contents
+echo $contents >> mario2.c
+contents=$(cat eval ./mario1.c)
+contents=$(eval ./mario1.c)
+text=$(eval ./mario1.c)
+cat mario1.c mario2.c
+cat mario1.c >> mario2.c
+clear
+clear
+make mario2.c
+make mario2
+make mario2
+make mario2
+make mario2
+make mario2
+clear
+clear
+make mario2
+clear
+make mario2
+make mario2
+make mario2
+make mario2
+make mario2
+make mario2
+make mario2
+clear
+make mario2
+make mario2
+make mario2
+clear
+make mario2
+make mario2
+./mario2
+make mario2
+./mario2
+make mario2
+./mario2
+make mario2
+./mario2
+make mario2
+make mario2
+./mario2
+./mario2
+make mario2
+./mario2
+mv ./mario2.c mario.c
+ls
+rm mario2
+ls
+make mario
+check50 cs50/problems/2020/x/mario/more
+make mario
+rm mario2
+./mario
+check50 cs50/problems/2020/x/mario/more
+style50 mario.c
+style50 mario.c
+submit50 cs50/problems/2020/x/mario/more
+git add -A
+mv mario.c mario1.c
+mv mario.c mario2.c
+rm mario
+make mario2
