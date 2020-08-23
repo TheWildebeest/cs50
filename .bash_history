@@ -593,3 +593,13 @@ make credit
 make credit
 ./credit
 ./credit
+git add -A
+git commit -m "implemented checksum algorithm"
+git push
+git push
+git status
+cd ..
+cd ..
+cd ..
+pwd
+ls
