@@ -606,3 +606,20 @@ ls
 git add -A
 git commit -m "commit before adding card issuer check"
 git status
+git add .bash_history
+git commit -m "adding unstaged file"
+git status
+git push
+git push
+make credit
+cd week1/pset1/credit/
+make credite
+make credit
+./credit
+./credit
+make credit
+make credit
+make credit
+./credit
+./credit
+check50 cs50/problems/2020/x/credit

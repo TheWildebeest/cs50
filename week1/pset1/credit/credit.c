@@ -14,7 +14,7 @@ int main()
 
 	do
 	{
-	get_card_number = get_long("Enter a credit card number:   $ ");
+	get_card_number = get_long("Enter a credit card number:   # ");
 	}
 	while (get_card_number <= 0);
 
@@ -29,7 +29,7 @@ int main()
 
 	if (card_number_length != 13 && card_number_length != 15 && card_number_length != 16)
 	{
-		printf("INVALID");
+		printf("INVALID\n");
 		return 0;
 	}
 
@@ -68,11 +68,28 @@ int main()
 
 	if (checksum % 10 != 0)
 	{
-		printf("INVALID");
+		printf("INVALID\n");
 		return 0;
 	}
+	int initial_digits = card_number / pow(10, card_number_length -2);
 
-
+	if (initial_digits == 51 || initial_digits == 52 || initial_digits == 53 || initial_digits == 54 || initial_digits == 55)
+	{
+		printf("MASTERCARD\n");
+		return 0;
+	}
+		if (initial_digits == 34 || initial_digits == 37)
+	{
+		printf("AMEX\n");
+		return 0;
+	}
+	if (initial_digits / 10 == 4)
+	{
+		printf("VISA\n");
+		return 0;
+	}
+	printf("INVALID\n");
+	return 0;
 
 	// printf("Card number: %ld\n", card_number);
 	// printf("Number of digits: %i\n", card_number_length);
