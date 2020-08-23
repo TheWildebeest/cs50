@@ -1,0 +1,25 @@
+// AMEX
+//
+// 15 digits
+//
+// 34xx xxxx xxxx xxx
+// 37xx xxxx xxxx xxx
+
+// MasterCard
+//
+// 16 digits
+//
+// 51xx xxxx xxxx xxxx
+// 52xx xxxx xxxx xxxx
+// 53xx xxxx xxxx xxxx
+// 54xx xxxx xxxx xxxx
+// 55xx xxxx xxxx xxxx
+
+// Visa
+//
+// 13 digits
+// 16 digits
+//
+// 4xxx xxxx xxxx x
+// 4xxx xxxx xxxx xxxx
+

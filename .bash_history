@@ -444,3 +444,152 @@ make cash
 check50 cs50/problems/2020/x/cash
 check50 cs50/problems/2020/x/cash
 submit50 cs50/problems/2020/x/cash
+git add -A
+git commit -m "finally figure out cash problem"
+git push
+ls
+cd week1
+ls
+cd pset1/
+ls
+cd cash
+style50 cash.c
+style50 cash.c
+make cash
+submit50 cs50/problems/2020/x/cash
+submit50 cs50/problems/2020/x/cash
+cd ..
+cd credit/
+style50 credit.c
+style50 credit.c
+clear
+make creit
+make credit
+./credit
+make credit
+make credit
+make credit
+clear
+make credit
+make credit
+make credit
+make credit
+make credit
+./credit
+make credit
+./credit
+make credit
+./credit
+make credit
+cd week1/pset1/credit/
+ls
+make credit
+make credit
+make credit
+make credit
+./credit
+make credit
+./credit
+./credit
+./credit
+./credit
+make credit
+./credit
+make credit
+make credit
+make credit
+./credit
+make credit
+make credit
+make credit
+make credit
+clear
+make credit
+make credit
+./credit
+make credit
+./credit
+make credit
+./credit
+./credit
+make credit
+./credit
+make credit
+./credit
+make credit
+make credit
+make credit
+./credit
+make credit
+make credit
+make credit
+./credit
+make credit
+./credit
+make credit
+./credit
+make credit
+make credit
+./credit
+make credit
+./credit
+make credit
+./credit
+make credit
+./credit
+make credit
+./credit
+make credit
+./credit
+./credit
+make credit
+make credit
+make credit
+./credit
+./credit
+make credit
+./credit
+./crdit
+./credit
+make credit
+./credit
+./credit
+make credit
+./credit
+./credit
+make credit
+./credit
+make credit
+./credit
+./credit
+./credit
+make credit
+make credit
+make credit
+./credit
+make credit
+./credit
+./credit
+1234567891234567
+1234567891234567
+./credit
+4003600000000014
+./credit
+make credit
+make credit
+./credit
+make credit
+./credit
+2222222222222
+./credit
+make credit
+./credit
+./credit
+make creit
+make credit
+./credit
+2202020202020
+./credit
+make credit
+./credit
+./credit
