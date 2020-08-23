@@ -331,3 +331,116 @@ clang -lcs50 -o mario ./mario2.c -v
 cd ..
 cd ..
 cd
+git add -A
+git commit -m "file tidy-up"
+git push
+git pull origin master
+git push origin master
+git push
+ls
+cd week1
+ls
+cd pset1/
+ls
+mkdir cash
+cd cash
+touch cash.c
+clear
+make cash
+clear
+make cash
+make cash
+./cash
+clear
+check50 cs50/problems/2020/x/cash
+check50 cs50/problems/2020/x/cash
+check50 cs50/problems/2020/x/cash
+check50 cs50/problems/2020/x/cash
+clear
+make cash
+make cash
+make cas
+make cash
+./cash
+make cash
+./cash
+./cash
+./cash
+make cash
+clear
+make cash
+clear
+pwd
+ls
+cd ./week1/pset1/cash/
+make cash
+make cash
+clear
+make cash
+./cash
+make cash
+./cash
+make cash
+./cash
+say hello
+say "hello"
+make cash
+./cash
+./cash
+./cash
+./cash
+make cash
+./cash
+make cash
+make cash
+make cash
+make cash
+./cash
+make cash
+./cash
+make cash
+pwd
+cd week1/pset1/cash/
+make cash
+make cash
+make cash
+make cash
+./cash
+make cash
+./cash
+make cash
+make cash
+./cash
+make cash
+./cash
+./cash
+./cash
+./cash
+./cash
+make cash
+make cash
+./cash
+make cash
+./cash
+make cash
+./cash
+./cash
+make cash
+./cash
+make cash
+./cash
+check50 cs50/problems/2020/x/cash
+check50 cs50/problems/2020/x/cash
+TheWildebeest
+check50 cs50/problems/2020/x/cash
+check50 cs50/problems/2020/x/cash
+make cash
+make cash
+./cash
+./cash
+make cash
+./cash
+./cash
+check50 cs50/problems/2020/x/cash
+check50 cs50/problems/2020/x/cash
+submit50 cs50/problems/2020/x/cash
