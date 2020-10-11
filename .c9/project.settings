@@ -1,5 +1,11 @@
 {
     "cs50": {
+        "debug": {
+            "@name": null,
+            "@pid": null,
+            "@proxy": null,
+            "@runner": null
+        },
         "simple": {
             "settings": {
                 "@revision": 6
@@ -24,6 +30,9 @@
                 }
             }
         }
+    },
+    "launchconfigurations": {
+        "@currentconfig": ""
     },
     "python": {
         "@path": "/usr/local/lib/python3.7/site-packages"

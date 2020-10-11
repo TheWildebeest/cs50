@@ -1,0 +1,741 @@
+
+
+Sun Oct 11 2020 12:57:58 GMT+0000 (Coordinated Universal Time)1-target-select remote localhost:15470
+
+GDB: =thread-group-added,id="i1"
+GDB: ~"Reading symbols from ./bug2..."
+GDB: ~"done.\n"
+GDB: =tsv-created,name="trace_timestamp",initial="0"\n
+GDB: =thread-group-started,id="i1",pid="3555"
+GDB: =thread-created,id="1",group-id="i1"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: &"warning: File transfers from remote targets can be slow. Use \"set sysroot\" to access files locally instead.\n"
+GDB: ~"Reading /lib64/ld-linux-x86-64.so.2 from remote target...\n"
+GDB: =library-loaded,id="/lib64/ld-linux-x86-64.so.2",target-name="/lib64/ld-linux-x86-64.so.2",host-name="target:/lib64/ld-linux-x86-64.so.2",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7dd5f10",to="0x00007ffff7df4b50"}]
+GDB: ~"Reading /lib64/ld-2.27.so from remote target...\n"
+GDB: ~"Reading /lib64/.debug/ld-2.27.so from remote target...\n"
+GDB: ~"0x00007ffff7dd6090 in ?? () from target:/lib64/ld-linux-x86-64.so.2\n"
+GDB: *stopped,frame={addr="0x00007ffff7dd6090",func="??",args=[],from="target:/lib64/ld-linux-x86-64.so.2"},thread-id="1",stopped-threads="all",core="11"
+GDB: 1^connected
+2set breakpoint condition-evaluation host
+
+GDB: &"set breakpoint condition-evaluation host\n"
+GDB: =cmd-param-changed,param="breakpoint condition-evaluation",value="host"
+GDB: 2^done
+PROXY: server connected
+SENDING: Content-Length:9
+
+"connect"
+PLUGIN: Content-Length:29
+
+{"command":"bp-list","_id":1}
+3-break-list 
+
+GDB: 3^done,BreakpointTable={nr_rows="0",nr_cols="6",hdr=[{width="7",alignment="-1",col_name="number",colhdr="Num"},{width="14",alignment="-1",col_name="type",colhdr="Type"},{width="4",alignment="-1",col_name="disp",colhdr="Disp"},{width="3",alignment="-1",col_name="enabled",colhdr="Enb"},{width="10",alignment="-1",col_name="addr",colhdr="Address"},{width="40",alignment="2",col_name="what",colhdr="What"}],body=[]}
+SENDING: Content-Length:510
+
+{"_seq":"3","state":"done","status":{"BreakpointTable":{"nr_rows":"0","nr_cols":"6","hdr":[{"width":"7","alignment":"-1","col_name":"number","colhdr":"Num"},{"width":"14","alignment":"-1","col_name":"type","colhdr":"Type"},{"width":"4","alignment":"-1","col_name":"disp","colhdr":"Disp"},{"width":"3","alignment":"-1","col_name":"enabled","colhdr":"Enb"},{"width":"10","alignment":"-1","col_name":"addr","colhdr":"Address"},{"width":"40","alignment":"2","col_name":"what","colhdr":"What"}],"body":[]}},"_id":1}
+PLUGIN: Content-Length:189
+
+{"path":"/week2/bug2.c","line":3,"column":0,"text":"bug2.c","content":"int main(void)","time":1602421046954,"enabled":true,"fullpath":"/home/ubuntu/week2/bug2.c","command":"bp-set","_id":2}
+4-break-insert "/home/ubuntu/week2/bug2.c:4"
+
+GDB: 4^done,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004005cf",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="4",thread-groups=["i1"],times="0",original-location="/home/ubuntu/week2/bug2.c:4"}
+SENDING: Content-Length:309
+
+{"_seq":"4","state":"done","status":{"bkpt":{"number":"1","type":"breakpoint","disp":"keep","enabled":"y","addr":"0x00000000004005cf","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"4","thread-groups":["i1"],"times":"0","original-location":"/home/ubuntu/week2/bug2.c:4"}},"_id":2}
+PLUGIN: Content-Length:30
+
+{"command":"continue","_id":3}
+5-exec-continue 
+
+GDB: 5^running
+SENDING: Content-Length:50
+
+{"_seq":"5","state":"running","status":{},"_id":3}
+GDB: *running,thread-id="all"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt.so.1 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libcrypt.so.1",target-name="/lib/x86_64-linux-gnu/libcrypt.so.1",host-name="target:/lib/x86_64-linux-gnu/libcrypt.so.1",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7b9dd50",to="0x00007ffff7ba38b8"}]
+GDB: ~"Reading /usr/lib/libcs50.so.10 from remote target...\n"
+GDB: =library-loaded,id="/usr/lib/libcs50.so.10",target-name="/usr/lib/libcs50.so.10",host-name="target:/usr/lib/libcs50.so.10",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7999c40",to="0x00007ffff799abb9"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libm.so.6",target-name="/lib/x86_64-linux-gnu/libm.so.6",host-name="target:/lib/x86_64-linux-gnu/libm.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff7606a80",to="0x00007ffff76c51d5"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc.so.6 from remote target...\n"
+GDB: =library-loaded,id="/lib/x86_64-linux-gnu/libc.so.6",target-name="/lib/x86_64-linux-gnu/libc.so.6",host-name="target:/lib/x86_64-linux-gnu/libc.so.6",symbols-loaded="0",thread-group="i1",ranges=[{from="0x00007ffff722b2d0",to="0x00007ffff73a3eac"}]
+GDB: ~"Reading /lib/x86_64-linux-gnu/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libcrypt-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libm-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/libc-2.27.so from remote target...\n"
+GDB: ~"Reading /lib/x86_64-linux-gnu/.debug/libc-2.27.so from remote target...\n"
+GDB: =breakpoint-modified,bkpt={number="1",type="breakpoint",disp="keep",enabled="y",addr="0x00000000004005cf",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="4",thread-groups=["i1"],times="1",original-location="/home/ubuntu/week2/bug2.c:4"}
+GDB: ~"\n"
+GDB: ~"Breakpoint 1, main () at bug2.c:6\n"
+GDB: ~"6\t    for (int index = 0; index < 10; index++)\n"
+GDB: *stopped,reason="breakpoint-hit",disp="keep",bkptno="1",frame={addr="0x00000000004005cf",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="11"
+6-stack-list-frames 0 50
+
+GDB: 6^done,stack=[frame={level="0",addr="0x00000000004005cf",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+7-stack-list-arguments --simple-values 0 50
+
+GDB: 7^done,stack-args=[frame={level="0",args=[]}]
+8-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 8^done,locals=[{name="index",type="int",value="0"}]
+9-var-update --all-values *
+
+GDB: 9^done,changelist=[]
+10-var-create - * index
+
+GDB: 10^done,name="var1",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005cf","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"0","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":4}
+11-exec-next 
+
+GDB: 11^running
+SENDING: Content-Length:51
+
+{"_seq":"11","state":"running","status":{},"_id":4}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="11"
+12-stack-list-frames 0 50
+
+GDB: 12^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+13-stack-list-arguments --simple-values 0 50
+
+GDB: 13^done,stack-args=[frame={level="0",args=[]}]
+14-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 14^done,locals=[{name="index",type="int",value="0"}]
+15-var-update --all-values *
+
+GDB: 15^done,changelist=[]
+16-var-create - * index
+
+GDB: 16^done,name="var2",numchild="0",value="0",type="int",thread-id="1",has_more="0"
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"0","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":5}
+17-exec-next 
+
+GDB: 17^running
+SENDING: Content-Length:51
+
+{"_seq":"17","state":"running","status":{},"_id":5}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+18-stack-list-frames 0 50
+
+GDB: 18^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+19-stack-list-arguments --simple-values 0 50
+
+GDB: 19^done,stack-args=[frame={level="0",args=[]}]
+20-var-update --all-values *
+
+GDB: 20^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"0","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":6}
+21-exec-next 
+
+GDB: 21^running
+SENDING: Content-Length:51
+
+{"_seq":"21","state":"running","status":{},"_id":6}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="12"
+22-stack-list-frames 0 50
+
+GDB: 22^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+23-stack-list-arguments --simple-values 0 50
+
+GDB: 23^done,stack-args=[frame={level="0",args=[]}]
+24-var-update --all-values *
+
+GDB: 24^done,changelist=[{name="var2",value="1",in_scope="true",type_changed="false",has_more="0"},{name="var1",value="1",in_scope="true",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"1","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":7}
+25-exec-next 
+
+GDB: 25^running
+SENDING: Content-Length:51
+
+{"_seq":"25","state":"running","status":{},"_id":7}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+26-stack-list-frames 0 50
+
+GDB: 26^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+27-stack-list-arguments --simple-values 0 50
+
+GDB: 27^done,stack-args=[frame={level="0",args=[]}]
+28-var-update --all-values *
+
+GDB: 28^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"1","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":8}
+29-exec-next 
+
+GDB: 29^running
+SENDING: Content-Length:51
+
+{"_seq":"29","state":"running","status":{},"_id":8}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="12"
+30-stack-list-frames 0 50
+
+GDB: 30^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+31-stack-list-arguments --simple-values 0 50
+
+GDB: 31^done,stack-args=[frame={level="0",args=[]}]
+32-var-update --all-values *
+
+GDB: 32^done,changelist=[{name="var2",value="2",in_scope="true",type_changed="false",has_more="0"},{name="var1",value="2",in_scope="true",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"2","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:26
+
+{"command":"next","_id":9}
+33-exec-next 
+
+GDB: 33^running
+SENDING: Content-Length:51
+
+{"_seq":"33","state":"running","status":{},"_id":9}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+34-stack-list-frames 0 50
+
+GDB: 34^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+35-stack-list-arguments --simple-values 0 50
+
+GDB: 35^done,stack-args=[frame={level="0",args=[]}]
+36-var-update --all-values *
+
+GDB: 36^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"2","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":10}
+37-exec-next 
+
+GDB: 37^running
+SENDING: Content-Length:52
+
+{"_seq":"37","state":"running","status":{},"_id":10}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="12"
+38-stack-list-frames 0 50
+
+GDB: 38^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+39-stack-list-arguments --simple-values 0 50
+
+GDB: 39^done,stack-args=[frame={level="0",args=[]}]
+40-var-update --all-values *
+
+GDB: 40^done,changelist=[{name="var2",value="3",in_scope="true",type_changed="false",has_more="0"},{name="var1",value="3",in_scope="true",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"3","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":11}
+41-exec-next 
+
+GDB: 41^running
+SENDING: Content-Length:52
+
+{"_seq":"41","state":"running","status":{},"_id":11}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+42-stack-list-frames 0 50
+
+GDB: 42^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+43-stack-list-arguments --simple-values 0 50
+
+GDB: 43^done,stack-args=[frame={level="0",args=[]}]
+44-var-update --all-values *
+
+GDB: 44^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"3","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":12}
+45-exec-next 
+
+GDB: 45^running
+SENDING: Content-Length:52
+
+{"_seq":"45","state":"running","status":{},"_id":12}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="12"
+46-stack-list-frames 0 50
+
+GDB: 46^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+47-stack-list-arguments --simple-values 0 50
+
+GDB: 47^done,stack-args=[frame={level="0",args=[]}]
+48-var-update --all-values *
+
+GDB: 48^done,changelist=[{name="var2",value="4",in_scope="true",type_changed="false",has_more="0"},{name="var1",value="4",in_scope="true",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"4","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":13}
+49-exec-next 
+
+GDB: 49^running
+SENDING: Content-Length:52
+
+{"_seq":"49","state":"running","status":{},"_id":13}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+50-stack-list-frames 0 50
+
+GDB: 50^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+51-stack-list-arguments --simple-values 0 50
+
+GDB: 51^done,stack-args=[frame={level="0",args=[]}]
+52-var-update --all-values *
+
+GDB: 52^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"4","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":14}
+53-exec-next 
+
+GDB: 53^running
+SENDING: Content-Length:52
+
+{"_seq":"53","state":"running","status":{},"_id":14}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="12"
+54-stack-list-frames 0 50
+
+GDB: 54^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+55-stack-list-arguments --simple-values 0 50
+
+GDB: 55^done,stack-args=[frame={level="0",args=[]}]
+56-var-update --all-values *
+
+GDB: 56^done,changelist=[{name="var2",value="5",in_scope="true",type_changed="false",has_more="0"},{name="var1",value="5",in_scope="true",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"5","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":15}
+57-exec-next 
+
+GDB: 57^running
+SENDING: Content-Length:52
+
+{"_seq":"57","state":"running","status":{},"_id":15}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+58-stack-list-frames 0 50
+
+GDB: 58^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+59-stack-list-arguments --simple-values 0 50
+
+GDB: 59^done,stack-args=[frame={level="0",args=[]}]
+60-var-update --all-values *
+
+GDB: 60^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"5","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":16}
+61-exec-next 
+
+GDB: 61^running
+SENDING: Content-Length:52
+
+{"_seq":"61","state":"running","status":{},"_id":16}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="12"
+62-stack-list-frames 0 50
+
+GDB: 62^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+63-stack-list-arguments --simple-values 0 50
+
+GDB: 63^done,stack-args=[frame={level="0",args=[]}]
+64-var-update --all-values *
+
+GDB: 64^done,changelist=[{name="var2",value="6",in_scope="true",type_changed="false",has_more="0"},{name="var1",value="6",in_scope="true",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"6","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":17}
+65-exec-next 
+
+GDB: 65^running
+SENDING: Content-Length:52
+
+{"_seq":"65","state":"running","status":{},"_id":17}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+66-stack-list-frames 0 50
+
+GDB: 66^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+67-stack-list-arguments --simple-values 0 50
+
+GDB: 67^done,stack-args=[frame={level="0",args=[]}]
+68-var-update --all-values *
+
+GDB: 68^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"6","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":18}
+69-exec-next 
+
+GDB: 69^running
+SENDING: Content-Length:52
+
+{"_seq":"69","state":"running","status":{},"_id":18}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="12"
+70-stack-list-frames 0 50
+
+GDB: 70^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+71-stack-list-arguments --simple-values 0 50
+
+GDB: 71^done,stack-args=[frame={level="0",args=[]}]
+72-var-update --all-values *
+
+GDB: 72^done,changelist=[{name="var2",value="7",in_scope="true",type_changed="false",has_more="0"},{name="var1",value="7",in_scope="true",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"7","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":19}
+73-exec-next 
+
+GDB: 73^running
+SENDING: Content-Length:52
+
+{"_seq":"73","state":"running","status":{},"_id":19}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+74-stack-list-frames 0 50
+
+GDB: 74^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+75-stack-list-arguments --simple-values 0 50
+
+GDB: 75^done,stack-args=[frame={level="0",args=[]}]
+76-var-update --all-values *
+
+GDB: 76^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"7","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"next","_id":20}
+77-exec-next 
+
+GDB: 77^running
+SENDING: Content-Length:52
+
+{"_seq":"77","state":"running","status":{},"_id":20}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="12"
+78-stack-list-frames 0 50
+
+GDB: 78^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+79-stack-list-arguments --simple-values 0 50
+
+GDB: 79^done,stack-args=[frame={level="0",args=[]}]
+80-var-update --all-values *
+
+GDB: 80^done,changelist=[{name="var2",value="8",in_scope="true",type_changed="false",has_more="0"},{name="var1",value="8",in_scope="true",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"8","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"step","_id":21}
+81-exec-step 
+
+GDB: 81^running
+SENDING: Content-Length:52
+
+{"_seq":"81","state":"running","status":{},"_id":21}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff726ef00",func="__printf",args=[{name="format",value="0x400694 \"%i\\n\""}],file="printf.c",fullname="/build/glibc-2ORdQG/glibc-2.27/stdio-common/printf.c",line="28"},thread-id="1",stopped-threads="all",core="12"
+82-stack-list-frames 0 50
+
+GDB: 82^done,stack=[frame={level="0",addr="0x00007ffff726ef00",func="__printf",file="printf.c",fullname="/build/glibc-2ORdQG/glibc-2.27/stdio-common/printf.c",line="28"},frame={level="1",addr="0x00000000004005f4",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x00000000004005f4",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},gdb-result-var="$1",return-value="2",thread-id="1",stopped-threads="all",core="12"
+83-stack-list-frames 0 50
+
+GDB: 83^done,stack=[frame={level="0",addr="0x00000000004005f4",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+84-stack-list-arguments --simple-values 0 50
+
+GDB: 84^done,stack-args=[frame={level="0",args=[]}]
+85-var-update --all-values *
+
+GDB: 85^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f4","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"8","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"step","_id":22}
+86-exec-step 
+
+GDB: 86^running
+SENDING: Content-Length:52
+
+{"_seq":"86","state":"running","status":{},"_id":22}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+87-stack-list-frames 0 50
+
+GDB: 87^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+88-stack-list-arguments --simple-values 0 50
+
+GDB: 88^done,stack-args=[frame={level="0",args=[]}]
+89-var-update --all-values *
+
+GDB: 89^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"8","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"step","_id":23}
+90-exec-step 
+
+GDB: 90^running
+SENDING: Content-Length:52
+
+{"_seq":"90","state":"running","status":{},"_id":23}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005e0",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},thread-id="1",stopped-threads="all",core="12"
+91-stack-list-frames 0 50
+
+GDB: 91^done,stack=[frame={level="0",addr="0x00000000004005e0",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+92-stack-list-arguments --simple-values 0 50
+
+GDB: 92^done,stack-args=[frame={level="0",args=[]}]
+93-var-update --all-values *
+
+GDB: 93^done,changelist=[{name="var2",value="9",in_scope="true",type_changed="false",has_more="0"},{name="var1",value="9",in_scope="true",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005e0","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"9","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"step","_id":24}
+94-exec-step 
+
+GDB: 94^running
+SENDING: Content-Length:52
+
+{"_seq":"94","state":"running","status":{},"_id":24}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff726ef00",func="__printf",args=[{name="format",value="0x400694 \"%i\\n\""}],file="printf.c",fullname="/build/glibc-2ORdQG/glibc-2.27/stdio-common/printf.c",line="28"},thread-id="1",stopped-threads="all",core="12"
+95-stack-list-frames 0 50
+
+GDB: 95^done,stack=[frame={level="0",addr="0x00007ffff726ef00",func="__printf",file="printf.c",fullname="/build/glibc-2ORdQG/glibc-2.27/stdio-common/printf.c",line="28"},frame={level="1",addr="0x00000000004005f4",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="function-finished",frame={addr="0x00000000004005f4",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"},gdb-result-var="$2",return-value="2",thread-id="1",stopped-threads="all",core="12"
+96-stack-list-frames 0 50
+
+GDB: 96^done,stack=[frame={level="0",addr="0x00000000004005f4",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="8"}]
+97-stack-list-arguments --simple-values 0 50
+
+GDB: 97^done,stack-args=[frame={level="0",args=[]}]
+98-var-update --all-values *
+
+GDB: 98^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f4","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"8","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"9","objname":"var2","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"step","_id":25}
+99-exec-step 
+
+GDB: 99^running
+SENDING: Content-Length:52
+
+{"_seq":"99","state":"running","status":{},"_id":25}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00000000004005f7",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"},thread-id="1",stopped-threads="all",core="12"
+100-stack-list-frames 0 50
+
+GDB: 100^done,stack=[frame={level="0",addr="0x00000000004005f7",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="6"}]
+101-stack-list-arguments --simple-values 0 50
+
+GDB: 101^done,stack-args=[frame={level="0",args=[]}]
+102-var-update --all-values *
+
+GDB: 102^done,changelist=[]
+-stack-select-frame 0
+
+SENDING: Content-Length:256
+
+{"thread":"1","frames":[{"level":"0","addr":"0x00000000004005f7","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"6","exists":true,"args":[],"locals":[{"name":"index","type":"int","value":"9","objname":"var1","numchild":"0"}]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"step","_id":26}
+103-exec-step 
+
+GDB: 103^running
+SENDING: Content-Length:53
+
+{"_seq":"103","state":"running","status":{},"_id":26}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x0000000000400605",func="main",args=[],file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="10"},thread-id="1",stopped-threads="all",core="14"
+104-stack-list-frames 0 50
+
+GDB: 104^done,stack=[frame={level="0",addr="0x0000000000400605",func="main",file="bug2.c",fullname="/home/ubuntu/week2/bug2.c",line="10"}]
+105-stack-list-arguments --simple-values 0 50
+
+GDB: 105^done,stack-args=[frame={level="0",args=[]}]
+106-stack-list-locals --thread 1 --frame 0 --simple-values
+
+GDB: 106^done,locals=[]
+107-var-update --all-values *
+
+GDB: 107^done,changelist=[{name="var2",in_scope="false",type_changed="false",has_more="0"},{name="var1",in_scope="false",type_changed="false",has_more="0"}]
+-stack-select-frame 0
+
+SENDING: Content-Length:184
+
+{"thread":"1","frames":[{"level":"0","addr":"0x0000000000400605","func":"main","file":"bug2.c","fullname":"/home/ubuntu/week2/bug2.c","line":"10","exists":true,"args":[],"locals":[]}]}
+GDB: ^done
+PLUGIN: Content-Length:27
+
+{"command":"step","_id":27}
+108-exec-step 
+
+GDB: 108^running
+SENDING: Content-Length:53
+
+{"_seq":"108","state":"running","status":{},"_id":27}
+GDB: *running,thread-id="all"
+GDB: *stopped,reason="end-stepping-range",frame={addr="0x00007ffff722bb97",func="__libc_start_main",args=[{name="main",value="0x4005c0 <main>"},{name="argc",value="1"},{name="argv",value="0x7fffffffe708"},{name="init",value="<optimized out>"},{name="fini",value="<optimized out>"},{name="rtld_fini",value="<optimized out>"},{name="stack_end",value="0x7fffffffe6f8"}],file="../csu/libc-start.c",fullname="/build/glibc-2ORdQG/glibc-2.27/csu/../csu/libc-start.c",line="344"},thread-id="1",stopped-threads="all",core="14"
+109-stack-list-frames 0 50
+
+GDB: 109^done,stack=[frame={level="0",addr="0x00007ffff722bb97",func="__libc_start_main",file="../csu/libc-start.c",fullname="/build/glibc-2ORdQG/glibc-2.27/csu/../csu/libc-start.c",line="344"},frame={level="1",addr="0x00000000004004fa",func="_start"}]
+-exec-finish 
+
+GDB: ^running
+GDB: *running,thread-id="all"
+
+Child exited with status 0
+
+GDB: ~"[Inferior 1 (process 3555) exited normally]\n"
