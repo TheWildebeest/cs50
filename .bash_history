@@ -504,3 +504,46 @@ ls
 pwe
 pwd
 git status
+git add -A
+git rm --cached .local/share/help50/cs50/helpers/
+git rm - f --cached .local/share/help50/cs50/helpers/
+git rm -f --cached .local/share/help50/cs50/helpers/
+git branch
+pwd
+git status
+cd ..
+ls
+cd cs50/
+;s
+ls
+cd 2019
+ls
+cd ..
+cd 2020
+ls
+cd ..
+ls
+cd ..
+ls
+cd ubuntu
+ls
+git status
+ls
+cd week0/
+ls
+git status
+git branch --all
+git branch remote
+ls
+git remote -v
+ls
+cd ..
+ls
+git add index.html 
+git commit -m "test"
+git push
+git add ./week0
+git add ./week1
+git add ./week2
+git commit -m "adding updated week2 content"
+cd week2
